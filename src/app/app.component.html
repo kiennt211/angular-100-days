@@ -1,4 +1,18 @@
 <hello name="{{ name }}"></hello>
-<p>
+<button (click) ="color = 'red'"> Red</button>
+<br> <br>
+<button (click)="color = 'blue'"> Blue</button>
+<p [style.color] = "color">
   Start editing to see some magic happen :)
 </p>
+<br><br>
+<button (click) = "isBlue = true"> Blue</button>
+<br><br>
+<button (click) = "isBlue = false"> Default</button>
+<div class ="box" [class.border_blue]=isBlue>Alo </div>
+<progress-bar [progress] = "20">
+</progress-bar>
+<br>
+<button (click)="currentProgress=currentProgress+1"> Increase progress</button>
+<progress-bar [progress] = "currentProgress">
+</progress-bar>
