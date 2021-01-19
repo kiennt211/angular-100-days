@@ -2,7 +2,7 @@ import { Component, Input, OnInit, OnChanges } from "@angular/core";
 
 @Component(
   {
-    selector: 'progress-bar',
+    selector: `progress-bar`,
     template:`
     <div
       class="progress-bar-container"
