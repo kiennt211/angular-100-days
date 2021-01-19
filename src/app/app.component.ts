@@ -36,4 +36,9 @@ export class AppComponent {
     //   this.toggleComp.toggle();
     // })
   }
+  questions = {
+    question1: true,
+    question2: false,
+    question3: true
+  };
 }

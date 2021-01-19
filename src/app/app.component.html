@@ -16,13 +16,23 @@
 <button (click)="currentProgress=currentProgress+1">Increase progress</button>
 <progress-bar [progress]="currentProgress"> </progress-bar>
 <app-author-list> </app-author-list>
+<!-- Day13 -->
 <app-toggle
-  [checked]="isChecked"
+  [checked]="questions.question1"
   (checkedChange)="isChecked = $event"
-></app-toggle>
-<app-toggle [(checked)]="isChecked"></app-toggle>
+>
+  <h3>Header 1</h3>
+  <label> Question 1 </label>
+  <p>Content1</p>
+</app-toggle>
+<app-toggle [(checked)]="questions.question2" >
+  <h3>Header 2</h3>
+  <span ngProjectAs = "label"> Question 2 </span>
+  <p>Content2</p>
+  <button> Skip </button>
+</app-toggle>
 <ng-container *ngIf="showLast">
-  <app-toggle [(checked)]="isChecked"></app-toggle>
+  <app-toggle [(checked)]="questions.question3"></app-toggle>
 </ng-container>
 
 <!-- //<button (click)="toggleComp.toggle()">Toggle me</button> -->
